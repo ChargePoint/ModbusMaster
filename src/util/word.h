@@ -61,4 +61,17 @@ static inline uint16_t highWord(uint32_t ww)
 }
 
 
+/** @ingroup util_word
+    Generate 32-bit integer from (2) 16-bit words.
+
+    @param uint16_t hi (0x0000..0xFFFF)
+    @param uint16_t lo (0x0000..0xFFFF)
+    @return 32-bit integer (0x00000000..0xFFFFFFFF)
+*/
+static inline uint32_t LONG(uint16_t hi, uint16_t lo)
+{
+  return (uint32_t) ((hi) << 16 | (lo));
+}
+
+
 #endif /* _UTIL_WORD_H_ */
